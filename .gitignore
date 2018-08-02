@@ -1,0 +1,18 @@
+approot/node_modules
+approot/public/hot
+approot/public/storage
+approot/storage/*.key
+approot/vendor
+approot/.idea
+approot/.vagrant
+approot/Homestead.json
+approot/Homestead.yaml
+approot/npm-debug.log
+approot/yarn-error.log
+approot/.env
+
+# shiiiiho-kid
+approot/public/node_modules
+
+# wordpress
+approot/public/saba/wp-config.php
