@@ -3,7 +3,7 @@
 
 <article>
 	<section id="single" class="single">
-	
+
 	<div id="gsearch" class="gsearch">
 		<script>
 			(function() {
@@ -20,7 +20,7 @@
 		<gcse:searchbox-only></gcse:searchbox-only>
 	</div>
 	<br clear="both">
-	
+
 		<div class="single__entry">
 
 			<?php if (have_posts()): ?>
@@ -59,17 +59,20 @@
 			<?php
 				// 編集URLを表示
 				// edit_post_link( $link, $before, $after, $id );
+			if (!empty($allowIp)) {
 				if (is_user_logged_in() && in_array($_SERVER["REMOTE_ADDR"], $allowIp)) {
 						edit_post_link('この記事を編集', '<p>', '</p>');
 				} else if (in_array($_SERVER["REMOTE_ADDR"], $allowIp)) {
 					// post.php?post=52&action=edit
 					echo '<div id="entry_edit"><a target="_blank" href="'.get_bloginfo('url').'/wp-admin/post.php?post='.get_the_ID().'&action=edit'.'">ログインする</a></div>';
 				}
+			}
+
 			?>
 			<div class="single__entry--content">
 				<div id="lbb"></div>
 				<?php the_content(); ?>
-				
+
 				<div id="single_ad">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- omnoo Record 200block -->
@@ -141,4 +144,3 @@
 <?php get_footer(); ?>
 </body>
 </html>
-

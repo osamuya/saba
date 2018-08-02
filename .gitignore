@@ -15,4 +15,4 @@ approot/.env
 approot/public/node_modules
 
 # wordpress
-approot/public/saba/wp-config.php
+approot/public/note/wp-config.php
