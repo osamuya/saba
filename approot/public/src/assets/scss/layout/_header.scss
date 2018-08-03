@@ -1,6 +1,19 @@
 @charset "utf-8";
+nav {
+  background: #26499d;
+  ul {
+    li {
+      display: inline-block;
+      a:link, a:visited {
+        color: #fff;
+      }
+    }
+  }
+}
 .l{
     &-header{
+
+
 
     }
 }

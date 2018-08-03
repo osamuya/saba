@@ -2905,4 +2905,11 @@ blockquote:before {
       display: block; } }
 
 /*layout*/
+nav {
+  background: #26499d; }
+  nav ul li {
+    display: inline-block; }
+    nav ul li a:link, nav ul li a:visited {
+      color: #fff; }
+
 /*pages*/

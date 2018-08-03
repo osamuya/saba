@@ -1,9 +1,12 @@
 <?php get_template_part('meta'); ?>
 <?php get_header(); ?>
+<?php echo "123232321"; ?>
+
+
 
 <article>
 	<section id="toppage" class="toppage">
-	
+
 	<div id="gsearch" class="gsearch">
 		<script>
 			(function() {
@@ -20,7 +23,7 @@
 		<gcse:searchbox-only></gcse:searchbox-only>
 	</div>
 	<br clear="both">
-	
+
 		<?php query_posts($query_string .'&orderby=modified'); ?>
 		<?php if (have_posts()): ?>
 		<?php $i=0; ?>
@@ -41,11 +44,11 @@
 					$id = get_the_ID();
 
 					$images = get_children("post_parent=$id&amp;post_type=attachment&amp;post_mime_type=image");
-                    
+
                     // the_post_thumbnail('thumbnail');
                     // $img = get_the_post_thumbnail('thumbnail');
                     // var_dump($img);
-                    
+
 					if ($images) {
 						$keys = array_keys($images);
 						$lastkeys = array_pop($keys);
@@ -80,24 +83,24 @@
 			</div>
 		</div>
 		<?php endif; ?>
-		
-		
-		
+
+
+
 		<div id="page-navi" class="pagenavi">
 			<div id="page-navi-inner" class="pagenavi__block">
-			
-			
+
+
 				<?php
 					if(function_exists('wp_pagenavi')) {
 						wp_pagenavi();
 					}
 					global $wp_query;
 				?>
-				
+
 			</div>
 		</div>
-	
-	
+
+
 	</section>
 </article>
 
@@ -114,7 +117,7 @@
 		if (is_front_page() || is_home()) {
 			echo  $wp_query->found_posts;
 		} else {
-			
+
 		}
 		?>
 	</div>

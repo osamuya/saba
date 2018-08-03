@@ -22,6 +22,10 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const del  = require('del');
 
+/* Laravl5などPHPを使っている場合はproxyする */
+// npm install --save-dev gulp-connect-php
+const connect     = require('gulp-connect-php');
+
 //path
 const SRC = './src';
 const HTDOCS = './';
@@ -103,25 +107,33 @@ gulp.task('html', gulp.series('ejs'));
 
 // server
 gulp.task('browser-sync', () => {
-    browserSync({
-        server: {
-            proxy: "localhost:3000",
-            baseDir: HTDOCS
-        },
-        startPath: `${BASE_PATH}`,
-        ghostMode: false
+    // browserSync({
+    //     server: {
+    //         // proxy: "localhost:3000",
+    //         proxy: "saba.local:80",
+    //         baseDir: HTDOCS
+    //     },
+    //     startPath: `${BASE_PATH}`,
+    //     ghostMode: false
+    // });
+    connect.server({}, function() {
+      browserSync.init({
+        proxy: 'saba.local:80'
+      });
     });
     watch([`${SRC}/assets/scss/**/*.scss`], gulp.series('sass', browserSync.reload));
     watch([`${SRC}/assets/js/**/*.js`], gulp.series('browserify', browserSync.reload));
     watch('./src/**/*.+(jpg|jpeg|png|gif|svg)', gulp.series('image', browserSync.reload));
-    watch([
-        `${SRC}/**/*.ejs`,
-    ], gulp.series('ejs', browserSync.reload));
+    watch([`**/*.php`,], gulp.series('php', browserSync.reload));
 
 });
 
 gulp.task('server', gulp.series('browser-sync'));
 
+gulp.task('php', function (done) {
+    console.log('php');
+    done();
+});
 
 //js min
 gulp.task('compress', function () {
