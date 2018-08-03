@@ -47,22 +47,6 @@
 	<div id="saba22img" class="header__img">
 		<a href=""><img src="/assets/img/masaba.png" alt="<?php bloginfo('description'); ?>"></a>
 	</div>
-
-	<div id="gsearch" class="header__gsearch">
-		<script>
-			(function() {
-			    var cx = '009503186892029741062:gpqstvi6va8';
-			    var gcse = document.createElement('script');
-			    gcse.type = 'text/javascript';
-			    gcse.async = true;
-			    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-			        '//cse.google.com/cse.js?cx=' + cx;
-			    var s = document.getElementsByTagName('script')[0];
-			    s.parentNode.insertBefore(gcse, s);
-	  		})();
-		</script>
-	<gcse:searchbox-only></gcse:searchbox-only>
-	</div>
 </header>
 
 <div class="headerbottom"></div>

@@ -7,22 +7,7 @@
 <article>
 	<section id="toppage" class="toppage">
 
-	<div id="gsearch" class="gsearch">
-		<script>
-			(function() {
-			    var cx = '009503186892029741062:gpqstvi6va8';
-			    var gcse = document.createElement('script');
-			    gcse.type = 'text/javascript';
-			    gcse.async = true;
-			    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-			        '//cse.google.com/cse.js?cx=' + cx;
-			    var s = document.getElementsByTagName('script')[0];
-			    s.parentNode.insertBefore(gcse, s);
-	  		})();
-		</script>
-		<gcse:searchbox-only></gcse:searchbox-only>
-	</div>
-	<br clear="both">
+
 
 		<?php query_posts($query_string .'&orderby=modified'); ?>
 		<?php if (have_posts()): ?>
