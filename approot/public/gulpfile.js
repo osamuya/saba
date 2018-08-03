@@ -24,7 +24,7 @@ const del  = require('del');
 
 //path
 const SRC = './src';
-const HTDOCS = './public';
+const HTDOCS = './';
 const BASE_PATH = '/';
 const DEST = `${HTDOCS}${BASE_PATH}`;
 
