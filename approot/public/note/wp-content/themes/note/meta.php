@@ -7,7 +7,6 @@
 <!--<![endif]-->
 
 <head>
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -81,12 +80,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Saba note</title>
 
 <!-- css -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/bootstrap.css">
 <link rel="stylesheet" href="/assets/css/index.css">
 
 <!-- jQuery -->
-<script src="/assets/js/jquery-1.11.3.min.js"></script>
-<script src="/assets/js/main.js"></script>
+<!-- <script src="/assets/js/jquery-1.11.3.min.js"></script> -->
+<script src="/assets/js/bundle.js"></script>
 
 
 <!-- Anglularjs -->

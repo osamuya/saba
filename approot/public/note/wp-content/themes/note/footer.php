@@ -1,6 +1,6 @@
 <footer id="footer" class="footer">
 	<ul class="footer__menu">
-	
+
 		<li class="footer__menu--list"><a href="<?php bloginfo('url'); ?>">HOME</a></li>
 		<li class="footer__menu--list"><a href="/contact/form/">CONTACT US</a></li>
 		<li class="footer__menu--list"><a href="https://github.com/github" target="_blank">Github</a></li>
@@ -9,9 +9,6 @@
 		<li class="footer__menu--list"><a href="http://af.moshimo.com/" target="_blank">もしもアフィリエイト</a></li>
 	</ul>
 
-	<ul class="footer__banner">
-		<li class="footer__banner--list"><script type="text/javascript" src="https://minmoji.ucda.jp/sealjs/http%3A__saba.omnioo.com" charset="UTF-8"></script></li>
-	</ul>
 
 	<div class="footer__copyright">
 			<span>Copyright (C) <script type="text/JavaScript">
