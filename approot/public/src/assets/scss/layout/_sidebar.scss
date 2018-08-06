@@ -1,6 +1,28 @@
 @charset "utf-8";
-.l{
-    &-sidebar{
-
+.sidebar{
+  // background: #0ff;
+  .widget{
+    margin-bottom: 10px;
+    .widgettitle{
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: normal;
     }
+    ul{
+      li {
+        // margin-left: 10px;
+        line-height: 23px;
+        list-style-position: outside;
+        .post-date {
+          font-size: 11px;
+          color: #c1c1c1;
+        }
+      }
+      li:before {
+        font-family: FontAwesome;
+        content: '\f0fb'; /* アイコンのunicode */
+        margin-right:5px;
+      }
+    }
+  }
 }

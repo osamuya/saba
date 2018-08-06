@@ -60,12 +60,12 @@ function pagination($pages = '', $range = 2)
 
 
 // Access restriction
-$denyIp = array(
-	'61.126.188.59',		// sankaku-shibuya
-	// '119.243.74.222',	// sankaku-shibuya(backup & guest)
-	'153.120.8.50',			// sankaku main server (sankaku Git)
-	'221.42.149.135',		// nishina
-);
+// $denyIp = array(
+// 	'61.126.188.59',		// sankaku-shibuya
+// 	// '119.243.74.222',	// sankaku-shibuya(backup & guest)
+// 	'153.120.8.50',			// sankaku main server (sankaku Git)
+// 	'221.42.149.135',		// nishina
+// );
 
 # Dynamic side bar
 if ( function_exists('register_sidebar') ) register_sidebar();

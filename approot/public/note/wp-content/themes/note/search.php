@@ -1,73 +1,41 @@
-<?php query_posts($query_string .'&orderby=modified'); ?>
-<?php if (have_posts()): ?>
-<?php $i=0; ?>
-<?php while(have_posts()) : the_post(); ?>
+<!doctype html>
+<!--[if IE 6]> <html class="ie6"> <![endif]-->
+<!--[if IE 7]> <html class="ie7"> <![endif]-->
+<!--[if IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<html lang="ja">
+<!--<![endif]-->
+<head>
+<?php get_template_part('inc/meta'); ?>
+</head>
+<body>
+<?php get_template_part('inc/navi'); ?>
 
-  <div class="toppage__bblock">
-    <h3 class='toppage__bblock--ttl'>
-      <?php print "<span class='num'><!--".$i."--></span>"; ?>
-      <a href="<?php the_permalink(); ?>">
-        <?php the_title(); ?><!--<? the_date('Y.m.d');?>-->
-      </a>
-    </h3>
-    <div class="toppage__bblock--description">
+<div class="container mt60">
+  <div class="row">
 
-    <?php
-      $permalink = get_permalink($post->ID);
 
-      $id = get_the_ID();
+    <!-- main contents -->
+    <div class="col-lg-9 col-md-9 col-sm-12">
+      <h2 class="h2 mb40"><?php printf(_c('"%s"の検索結果'), get_search_query(__(''))); ?></h2>
+      <div class="main">
+        <?php get_template_part('inc/main_loop'); ?>
+      </div>
+    </div><!-- main contents end -->
 
-      $images = get_children("post_parent=$id&amp;post_type=attachment&amp;post_mime_type=image");
-
-                // the_post_thumbnail('thumbnail');
-                // $img = get_the_post_thumbnail('thumbnail');
-                // var_dump($img);
-
-      if ($images) {
-        $keys = array_keys($images);
-        $lastkeys = array_pop($keys);
-        $num = $lastkeys;
-        $thumbnail = wp_get_attachment_image_src($num,'medium');
-
-        $pathinfo = array();
-        $pathinfo = pathinfo($thumbnail[0]);
-        if ($pathinfo['extension'] == '') {
-          print '';
-        } else {
-          print "<a href='".$permalink."'>\n";
-          print '<img src="' . $thumbnail[0] . '" alt="' . $post->post_title . '" class="toppage__bblock--description--thmbnail">' . "\n";
-          print "</a>\n";
-        }
-      } else {
-        //print "なんかデフォルトのイメージとか。";
-      }
-    ?>
-
-          <?php the_excerpt(); ?>
+    <!-- Sidebar -->
+    <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="sidebar">
+            <?php if ( !function_exists('dynamic_sidebar')
+              || !dynamic_sidebar() ) : ?>
+              <!--ダイナミックサイドバーなかった時の処理-->
+            <?php endif; ?>
         </div>
-      </div><!--//.block-->
-      <br>
-<?php $i++; ?>
-<?php endwhile; ?>
-<?php else : ?>
-
-<div class="block-entry clearfix">
-  <div id="notfound">
-    <p>投稿がありませんが、たぶんどっかにあるので、再検索してみてください。</p>
-  </div>
-</div>
-<?php endif; ?>
-
-<div id="page-navi" class="pagenavi">
-  <div id="page-navi-inner" class="pagenavi__block">
-
-
-    <?php
-      if(function_exists('wp_pagenavi')) {
-        wp_pagenavi();
-      }
-      global $wp_query;
-    ?>
+    </div><!-- Sidebar end -->
 
   </div>
 </div>
+
+<?php get_template_part('inc/footer'); ?>
+</body>
+</html>
