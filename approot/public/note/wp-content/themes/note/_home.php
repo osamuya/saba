@@ -7,8 +7,11 @@
 <article>
 	<section id="toppage" class="toppage">
 
+<<<<<<< HEAD:approot/public/note/wp-content/themes/note/home.php
 
 
+=======
+>>>>>>> 2fe75c255defdf9be5c423a96bb35b25e4d2dab0:approot/public/note/wp-content/themes/note/_home.php
 		<?php query_posts($query_string .'&orderby=modified'); ?>
 		<?php if (have_posts()): ?>
 		<?php $i=0; ?>
