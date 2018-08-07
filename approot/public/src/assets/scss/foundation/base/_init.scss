@@ -117,19 +117,9 @@ sub {
 }
 
 blockquote{
-    background-color: #EEEFFF;
-    padding: 1em 1em 1em 3em;
-    position: relative;
-    border-left: 3px solid #666;
-}
-blockquote:before{
-    content: "“";
-    font-size: 600%;
-    line-height: 1em;
-    color: #999;
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin: 20px 0;
+    padding: 2em 2em 2em 2em;
+    border-left: 3px solid #c1c1c1;
 }
 
 ::selection {
