@@ -3,6 +3,8 @@
 .blog{
   line-height: 22px;
   .blog_content{
+    border-bottom: 1px solid #c1c1c1;
+    margin-bottom: 30px;
     em{
       background:linear-gradient(transparent 50%, #ccffff 0%);
     }
@@ -114,5 +116,48 @@
     .blockquote{
       margin: 20px 0;
     }
+
   }
+  .blog_meta {
+    .blog-cat{
+      ul{
+        li{
+          display: inline-block;
+        }
+      }
+    }
+    // background: #f00;
+    .blog-tag{
+      a:link,a:visited{
+        border: 1px solid #01499d;
+        margin-right: 9px;
+        padding: 1px 10px;
+        background: #01499d;
+        color: #fff;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        font-size: 13px;
+      }
+      a:before{
+        font-family: FontAwesome;
+        content: '\f02b';
+        padding-right: 4px;
+      }
+    }
+  }
+  .yarpp-related{
+    margin-top: 30px;
+    h3{
+      font-weight: normal;
+      margin-bottom: 0px;
+      font-size: 15px;
+    }
+    ol{
+      margin-top: 10px;
+    }
+  }
+}
+
+.blog-pageview {
+  width: 170px;
 }

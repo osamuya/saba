@@ -1,3 +1,15 @@
+<?php
+/* Template */
+if ( is_front_page() && is_home() ) {
+    $add_title = "";
+} elseif ( is_page() ) {
+    $add_title = " | ".get_the_title();
+} elseif ( is_single() ) {
+    $add_title = " | ".get_the_title();
+} else {
+    $add_title = "";
+}
+?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74972634-1"></script>
 <script>
@@ -7,7 +19,6 @@
 
   gtag('config', 'UA-74972634-1');
 </script>
-
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,9 +37,6 @@
 <meta property="og:description" content="">
 <meta name="twitter:description" content="">
 
-<meta name="description" content="">
-<meta name=”keywords” content=””>
-
 <link rel="stylesheet" href="/assets/css/font-awesome.css">
 <link rel="stylesheet" href="/assets/css/bootstrap.css">
 <link rel="stylesheet" href="/assets/css/index.css">
@@ -36,4 +44,7 @@
 <script src="/assets/js/jquery-1.11.3.min.js"></script>
 <script src="/assets/js/bootstrap.bundle.js"></script>
 <script src="/assets/js/bundle.js"></script>
-<title>Saba note</title>
+
+<title>Saba note<?php echo $add_title; ?></title>
+<meta name="description" content="">
+<meta name=”keywords” content=””>

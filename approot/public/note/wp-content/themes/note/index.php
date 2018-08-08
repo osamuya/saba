@@ -11,12 +11,16 @@
 <body>
 <?php get_template_part('inc/navi'); ?>
 
+<ol class="breadcrumb bg-white">
+  <li class="active">ホーム</li>
+</ol>
+
 <div class="container mt60">
   <div class="row">
 
     <!-- main contents -->
     <div class="col-lg-9 col-md-9 col-sm-12">
-      <h2 class="h2 mb40">Archives</h2>
+      <h2 class="h2 mb40">saba note new articles</h2>
       <div class="main">
         <?php get_template_part('inc/main_top_loop'); ?>
       </div>

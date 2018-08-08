@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <h1 class="nav_logo">
-    <a class="navbar-brand" href="#">Saba note</a>
+    <a class="navbar-brand" href="/note/">Saba note</a>
   </h1>
   <img src="/assets/img/masaba.png" class="logo">
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">

@@ -14,7 +14,7 @@
 
 <ol class="breadcrumb bg-white">
   <li><a href="/note/">ホーム</a></li>
-  <li><a href="/note/archives/">Archives</a></li>
+  <li><a href="/note/archives/">カテゴリー</a></li>
   <li class="active"><?php the_title(); ?></li>
 </ol>
 
@@ -34,9 +34,16 @@
 					<div class="blog_content">
 							<?php the_content(); ?>
 					</div>
+
 					<div class="blog_meta">
-							<?php the_date('Y.m.d');?>
+							<!--<?php the_date('Y.m.d');?>-->
+              <?php the_modified_date('Y.m.d (D)'); ?>
+
+              <div class="category blog-cat mt10"><?php the_category(); ?></div>
+              <div class="tag blog-tag mt10"><?php the_tags('',$before, $sep, $after ); ?></div>
+
 					</div>
+
       </div>
 
 			<?php $i++; ?>
@@ -51,6 +58,23 @@
 			<?php endif; ?>
 			<!--main_block end-->
 
+      <div class="blog-pageview mx-auto mt30 mb30">
+        <span><?php previous_post_link('%link','< 前の投稿'); ?></span>
+        <span><?php next_post_link('%link','次の投稿 >'); ?></span>
+      </div>
+
+
+      <div id="single_ad">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- omnoo Record 200block -->
+        <ins class="adsbygoogle"
+           style="display:inline-block;width:200px;height:200px"
+           data-ad-client="ca-pub-1927544273700791"
+           data-ad-slot="8315769773"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
 
     </div><!-- main contents end -->
 
