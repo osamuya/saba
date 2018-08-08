@@ -11,10 +11,15 @@
 <body>
 <?php get_template_part('inc/navi'); ?>
 
-
+<?php
+    $current_category_array = get_the_category();
+    $ccat_name = $current_category_array[0]->name;
+    $ccat_slug = $current_category_array[0]->slug;
+    $ccat_path = get_bloginfo("home")."/category/".$ccat_slug;
+?>
 <ol class="breadcrumb bg-white">
   <li><a href="/note/">ホーム</a></li>
-  <li><a href="/note/archives/">カテゴリー</a></li>
+  <li><a href="<?php echo $ccat_path; ?>"><?php echo $ccat_name; ?></a></li>
   <li class="active"><?php the_title(); ?></li>
 </ol>
 

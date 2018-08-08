@@ -5,7 +5,11 @@ if ( is_front_page() && is_home() ) {
 } elseif ( is_page() ) {
     $add_title = " | ".get_the_title();
 } elseif ( is_single() ) {
-    $add_title = " | ".get_the_title();
+    $current_category_array = get_the_category();
+    $ccat_name = $current_category_array[0]->name;
+    $ccat_slug = $current_category_array[0]->slug;
+    $ccat_path = get_bloginfo("home")."/category/".$ccat_slug;
+    $add_title = " | ".$ccat_name." | ".get_the_title();
 } else {
     $add_title = "";
 }
