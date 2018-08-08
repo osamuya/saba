@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.gallery{
+  .garelly_block{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    .gthumbnail_trimer{
+      position: relative;
+      display: block;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      margin-right:10px;
+      margin-bottom:10px;
+      border: 1px solid #c1c1c1;
+      img.gthumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+}

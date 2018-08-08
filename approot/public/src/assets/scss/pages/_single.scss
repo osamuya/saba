@@ -75,6 +75,10 @@
       white-space: -pre-wrap;     /* Opera 4-6 */
       white-space: -o-pre-wrap;   /* Opera 7 */
       white-space: pre-wrap;      /* CSS3 */
+      code{
+        font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        font-size: 14px;
+      }
     }
     table {
         width: 100%;

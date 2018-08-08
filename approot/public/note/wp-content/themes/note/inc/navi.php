@@ -23,11 +23,11 @@
           MENU
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">メニュー1</a>
-          <a class="dropdown-item" href="#">メニュー2</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">その他</a>
-        </div>
+          <a class="dropdown-item" href="/note/bookmark/" target="_blank">Bookmark</a>
+          <a class="dropdown-item" href="/note/profile/" target="_blank">Profile</a>
+          <?php if (accessControl()) : ?>
+              <a class="dropdown-item" href="/note/wp-login.php" target="_blank">Login</a>
+          <?php endif; ?>
       </li>
     </ul>
 
@@ -38,3 +38,4 @@
 
   </div><!-- /.navbar-collapse -->
 </nav>
+<?php echo "<!--".accessControl()."-->"; ?>

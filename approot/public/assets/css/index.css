@@ -10380,7 +10380,9 @@ nav {
   .sidebar .widget .widgettitle {
     margin-bottom: 10px;
     font-size: 18px;
-    font-weight: normal; }
+    font-weight: normal;
+    border-bottom: 1px dotted #c1c1c1;
+    padding-bottom: 2px; }
   .sidebar .widget ul li {
     line-height: 23px;
     list-style-position: outside; }
@@ -10537,6 +10539,9 @@ nav {
       /* Opera 7 */
       white-space: pre-wrap;
       /* CSS3 */ }
+      .blog .blog_content pre code {
+        font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        font-size: 14px; }
     .blog .blog_content table {
       width: 100%;
       table-layout: fixed;
@@ -10597,3 +10602,30 @@ nav {
 
 .blog-pageview {
   width: 170px; }
+
+.gallery .garelly_block {
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .gallery .garelly_block .gthumbnail_trimer {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #c1c1c1; }
+    .gallery .garelly_block .gthumbnail_trimer img.gthumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 150px;
+      height: auto; }

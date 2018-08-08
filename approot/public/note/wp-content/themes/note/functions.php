@@ -1,4 +1,34 @@
 <?php
+/* Access Control */
+function accessControl() {
+
+  $ip_lists = array(
+  		"127.0.0.1", //self
+  		"60.64.37.1", //tokura
+  		"61.21.62.90", //shibasaki
+  		"221.42.149.135",//nishina
+  		"126.196.29.106",//tsujido
+  		"110.66.186.176",//tsujido
+  		"61.126.188.59",//sankaku(main)
+  		"153.156.225.210",//sankaku(creative)
+  		"119.243.74.222",//sankaku(backup)
+  		"153.120.8.50",//japan server
+  		"27.133.131.225",//butan server
+  		"153.126.138.150",//bangkok server
+  		"59.106.223.227",//neojapan server
+  );
+  $ret = false;
+  foreach ($ip_lists as $ip) {
+    if($ip == $_SERVER["REMOTE_ADDR"]) {
+      $ret = true;
+      break;
+    } else {
+      $ret = false;
+      continue;
+    }
+  }
+  return $ret;
+}
 
 /* Get Thumbnail */
 function catch_that_image() {
@@ -13,6 +43,23 @@ function catch_that_image() {
     if(empty($matches[1][0])){
         // 記事内で画像がなかったときのためのデフォルト画像を指定
         $first_img = "/assets/img/default.jpg";
+    }
+    return $first_img;
+}
+
+/* Get Thumbnail */
+function get_image() {
+    global $post, $posts;
+    $first_img = '';
+    ob_start();
+    ob_end_clean();
+    $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    // $first_img = "https://saba.omnioo.com".$matches[1][0];
+    $first_img = "https://saba.omnioo.com".$matches[1][0];
+
+    if(empty($matches[1][0])){
+        // 記事内で画像がなかったときのためのデフォルト画像を指定
+        $first_img = "";
     }
     return $first_img;
 }
