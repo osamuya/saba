@@ -29,6 +29,17 @@
     <!-- Sidebar -->
     <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="sidebar">
+            <div>
+
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-tumblr-square"></i>
+
+              <a href="<?php bloginfo('rss2_url'); ?>">
+                <i class="fas fa-rss"></i>
+              </a>
+
+            </div>
+
             <?php if ( !function_exists('dynamic_sidebar')
               || !dynamic_sidebar() ) : ?>
               <!--ダイナミックサイドバーなかった時の処理-->

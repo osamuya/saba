@@ -19,3 +19,5 @@
   })(window,document,'script','https://omnioo.mautic.net/mtc.js','mt');
   mt('send', 'pageview');
 </script>
+
+<?php wp_footer(); ?>

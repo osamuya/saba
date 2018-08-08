@@ -10469,6 +10469,13 @@ nav {
     margin-bottom: 7px; }
 
 /*pages*/
+.sns_btn {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .sns_btn .sns_item {
+    margin-right: 15px; }
+
 .blog {
   line-height: 22px; }
   .blog .blog_content {
@@ -10599,6 +10606,8 @@ nav {
       font-size: 15px; }
     .blog .yarpp-related ol {
       margin-top: 10px; }
+      .blog .yarpp-related ol li a {
+        font-weight: normal; }
 
 .blog-pageview {
   width: 170px; }

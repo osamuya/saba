@@ -1,5 +1,11 @@
 @charset "utf-8";
+.sns_btn{
+  display:flex;
+  .sns_item{
+    margin-right: 15px;
+  }
 
+}
 .blog{
   line-height: 22px;
   .blog_content{
@@ -158,6 +164,11 @@
     }
     ol{
       margin-top: 10px;
+      li{
+        a{
+          font-weight: normal;
+        }
+      }
     }
   }
 }

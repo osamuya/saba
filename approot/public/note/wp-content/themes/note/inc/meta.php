@@ -73,3 +73,4 @@ if ( is_front_page() && is_home() ) {
 <title>Saba note<?php echo $add_title; ?></title>
 <meta name="description" content="<?php echo $description; ?>">
 <meta name="keywords" content="<?php echo $keyword; ?>">
+<?php wp_head(); ?>

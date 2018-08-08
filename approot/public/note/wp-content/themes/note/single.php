@@ -35,6 +35,16 @@
 			<?php while(have_posts()) : the_post(); ?>
       <h2 class="h2 mb40"><?php the_title(); ?></h2>
 
+      <div class="sns_btn mb20">
+          <div id="sns_thumblr" class="sns_item">
+            <a class="tumblr-share-button" href="https://www.tumblr.com/share" data-tags="<?php echo $sns_cat_name; ?>" data-caption="<?php echo $sns_contents; ?>" data-show-via="show-via"></a>
+            <script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script>
+          </div>
+          <div id="sns_twitter" class="sns_item">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="osamuya" data-lang="ja" data-count="none" data-text="<?php the_title(); echo $sns_tw_contents;?>">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </div>
+      </div>
+
       <div class="blog">
 					<div class="blog_content">
 							<?php the_content(); ?>
