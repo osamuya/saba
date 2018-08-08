@@ -1,17 +1,39 @@
 <?php
 /* Template */
 if ( is_front_page() && is_home() ) {
-    $add_title = "";
+    $add_title = " | トップページ";
+    $page_link = get_bloginfo("home");
+    $description = get_bloginfo("description");
+    $keyword = "Web製作,Linux,node.js,Ruby on rails,PHP,Javascript,Vue.js,AWS";
 } elseif ( is_page() ) {
     $add_title = " | ".get_the_title();
+    $page_link = get_permalink();
+    $description = get_the_title();
+    $keyword = get_the_title();
 } elseif ( is_single() ) {
+    /*current category*/
     $current_category_array = get_the_category();
     $ccat_name = $current_category_array[0]->name;
     $ccat_slug = $current_category_array[0]->slug;
     $ccat_path = get_bloginfo("home")."/category/".$ccat_slug;
+    /*current tag*/
+    $tags = get_the_tags();
+    if ($tags) {
+      foreach($tags as $tag) {
+        $tagline .= $tag->name.',';
+      }
+    }
+    /*title*/
     $add_title = " | ".$ccat_name." | ".get_the_title();
+    /*link*/
+    $page_link = get_permalink();
+    $description = get_the_title();
+    $keyword = substr($tagline, 0, -1);
 } else {
     $add_title = "";
+    $page_link = get_bloginfo("home");
+    $description = get_bloginfo("description");
+    $keyword = "Web製作,Linux,node.js,Ruby on rails,PHP,Javascript,Vue.js,AWS";
 }
 ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,7 +42,6 @@ if ( is_front_page() && is_home() ) {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-74972634-1');
 </script>
 
@@ -33,13 +54,13 @@ if ( is_front_page() && is_home() ) {
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="Saba note">
-<meta property="og:url" content="<?php the_permalink(); ?>">
-<meta name="twitter:url" content="<?php the_permalink(); ?>">
-<meta property="og:image" content="">
+<meta property="og:url" content="<?php echo $page_link; ?>">
+<meta name="twitter:url" content="<?php echo $page_link; ?>">
+<meta property="og:image" content="/assets/img/saba_og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="assets/img/saba_twitter.jpg">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="<?php echo $description; ?>">
+<meta name="twitter:description" content="<?php echo $description; ?>">
 
 <link rel="stylesheet" href="/assets/css/font-awesome.css">
 <link rel="stylesheet" href="/assets/css/bootstrap.css">
@@ -50,5 +71,5 @@ if ( is_front_page() && is_home() ) {
 <script src="/assets/js/bundle.js"></script>
 
 <title>Saba note<?php echo $add_title; ?></title>
-<meta name="description" content="">
-<meta name=”keywords” content=””>
+<meta name="description" content="<?php echo $description; ?>">
+<meta name="keywords" content="<?php echo $keyword; ?>">

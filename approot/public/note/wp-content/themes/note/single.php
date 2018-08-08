@@ -12,6 +12,7 @@
 <?php get_template_part('inc/navi'); ?>
 
 <?php
+    /*Current Category*/
     $current_category_array = get_the_category();
     $ccat_name = $current_category_array[0]->name;
     $ccat_slug = $current_category_array[0]->slug;
@@ -28,7 +29,6 @@
 
     <!-- main contents -->
     <div class="col-lg-9 col-md-9 col-sm-12">
-
 			<!--main_block-->
 			<?php if (have_posts()): ?>
 			<?php $i=0; ?>
@@ -39,16 +39,12 @@
 					<div class="blog_content">
 							<?php the_content(); ?>
 					</div>
-
-					<div class="blog_meta">
+					<div class="blog_meta text-right">
 							<!--<?php the_date('Y.m.d');?>-->
-              <?php the_modified_date('Y.m.d (D)'); ?>
-
-              <div class="category blog-cat mt10"><?php the_category(); ?></div>
+              Last update: <?php the_modified_date('Y.m.d (D)'); ?>
+              <div class="category blog-cat mt10"><?php the_category(" | "); ?></div>
               <div class="tag blog-tag mt10"><?php the_tags('',$before, $sep, $after ); ?></div>
-
 					</div>
-
       </div>
 
 			<?php $i++; ?>

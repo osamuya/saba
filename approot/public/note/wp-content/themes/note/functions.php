@@ -7,6 +7,7 @@ function catch_that_image() {
     ob_start();
     ob_end_clean();
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+    // $first_img = "https://saba.omnioo.com".$matches[1][0];
     $first_img = "https://saba.omnioo.com".$matches[1][0];
 
     if(empty($matches[1][0])){
