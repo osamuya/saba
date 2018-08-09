@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <h1 class="nav_logo">
     <a class="navbar-brand" href="/note/">Saba note</a>
   </h1>
@@ -33,7 +33,7 @@
 
     <form action="/note/" id="searchform" class="searchform form-inline my-2 my-lg-0">
       <input type="text" name="s" id="s" class="form-control mr-sm-2" placeholder="検索..." aria-label="検索...">
-      <button type="submit" id="searchsubmit" class="btn btn-secondary my-2 my-sm-0">検索</button>
+      <button type="submit" id="searchsubmit" class="btn btn-secondary my-2 my-sm-0">Search</button>
     </form>
 
   </div><!-- /.navbar-collapse -->

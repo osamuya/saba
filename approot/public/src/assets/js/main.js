@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /*sample*/
-$('h1').on('click', () => {
-    console.log(`hello, ${sample.name}.`);
+// $('h1').on('click', () => {
+//     console.log(`hello, ${sample.name}.`);
+// });
+
+$(function(){
+  $(".logo").hover(function(){
+    $(this).attr("src","/assets/img/masaba_h.png");
+    console.log("on");
+  },function(){
+    $(this).attr("src","/assets/img/masaba.png");
+    console.log("off");
+  });
 });

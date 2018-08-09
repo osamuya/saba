@@ -11036,17 +11036,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var common = new _common2.default(); /*import*/
 
 var sample = new _Sample2.default({
-    name: 'world'
+  name: 'world'
 });
 
 /*load event*/
 document.addEventListener('DOMContentLoaded', function () {
-    common.init();
+  common.init();
 });
 
 /*sample*/
-(0, _jquery2.default)('h1').on('click', function () {
-    console.log('hello, ' + sample.name + '.');
+// $('h1').on('click', () => {
+//     console.log(`hello, ${sample.name}.`);
+// });
+
+(0, _jquery2.default)(function () {
+  (0, _jquery2.default)(".logo").hover(function () {
+    (0, _jquery2.default)(this).attr("src", "/assets/img/masaba_h.png");
+    console.log("on");
+  }, function () {
+    (0, _jquery2.default)(this).attr("src", "/assets/img/masaba.png");
+    console.log("off");
+  });
 });
 
 },{"./modules/Sample":3,"./modules/common":4,"jquery":1}],3:[function(require,module,exports){
