@@ -19,7 +19,7 @@
   <div class="row">
 
     <!-- main contents -->
-    <div class="col-lg-9 col-md-9 col-sm-12">
+    <div class="col-lg-9 col-md-9 col-sm-12 mb60">
       <h2 class="h2 mb40">Saba note new articles</h2>
       <div class="main">
         <?php get_template_part('inc/main_top_loop'); ?>

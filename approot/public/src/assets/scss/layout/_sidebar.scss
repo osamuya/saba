@@ -1,5 +1,6 @@
 @charset "utf-8";
 .sidebar{
+
   .sns{
     a{
       img.sns_icon{
@@ -62,6 +63,15 @@
         font-family: FontAwesome;
         content: '\f105'; /* アイコンのunicode */
         margin-right:5px;
+      }
+    }
+  }
+
+  #popular-posts{
+    // display: none;
+    ul{
+      li{
+        font-size:10px;
       }
     }
   }
