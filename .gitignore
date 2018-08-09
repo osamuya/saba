@@ -16,3 +16,4 @@ approot/public/node_modules
 
 # wordpress
 approot/public/note/wp-config.php
+approot/public/note/wp-content/themes/note/sysconfig.php

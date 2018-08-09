@@ -31,6 +31,9 @@
         <div class="sidebar">
 
             <div class="sns mb20">
+              <a href="https://github.com/osamthing" target="_blank">
+                <img src="/assets/img/sns/github.png" class="sns_icon">
+              </a>
               <a href="<?php bloginfo('rss2_url'); ?>" target="_blank">
                 <img src="/assets/img/sns/rss.png" class="sns_icon">
               </a>

@@ -1,4 +1,6 @@
 <?php
+include($_SERVER["DOCUMENT_ROOT"]."/note/wp-content/themes/note/sysconfig.php");
+
 /* Template */
 if ( is_front_page() && is_home() ) {
     $add_title = " | トップページ";

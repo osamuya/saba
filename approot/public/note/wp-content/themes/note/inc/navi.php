@@ -25,9 +25,10 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/note/bookmark/" target="_blank">Bookmark</a>
           <a class="dropdown-item" href="/note/sample-page/" target="_blank">Profile</a>
-          <?php if (accessControl()) : ?>
+          <?php if (accessControl($ip_lists)) : ?>
               <a class="dropdown-item" href="/note/wp-login.php" target="_blank">Login</a>
           <?php endif; ?>
+        </div>
       </li>
     </ul>
 
@@ -38,4 +39,3 @@
 
   </div><!-- /.navbar-collapse -->
 </nav>
-<?php echo "<!--".accessControl()."-->"; ?>
